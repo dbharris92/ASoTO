@@ -3,6 +3,6 @@ var json_Meancoordinates_2 = {
 "name": "Meancoordinates_2",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "MEAN_X": -85.346187360193056, "MEAN_Y": 38.962693055710481 }, "geometry": { "type": "Point", "coordinates": [ -85.346187360193056, 38.962693055710481 ] } }
+{ "type": "Feature", "properties": { "MEAN_X": -84.043640937791821, "MEAN_Y": 39.183113993955914 }, "geometry": { "type": "Point", "coordinates": [ -84.043640937791821, 39.183113993955914 ] } }
 ]
 }

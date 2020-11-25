@@ -61,6 +61,7 @@ var json_members_1 = {
 { "type": "Feature", "properties": { "fid": "57", "user": "Razz" }, "geometry": { "type": "Point", "coordinates": [ -78.875297338995509, 42.881024508646234 ] } },
 { "type": "Feature", "properties": { "fid": "58", "user": "Damon Cherico" }, "geometry": { "type": "Point", "coordinates": [ -74.127966098247384, 40.069320173488336 ] } },
 { "type": "Feature", "properties": { "fid": "59", "user": "Alex Laws" }, "geometry": { "type": "Point", "coordinates": [ -122.330612670789108, 47.605381036451256 ] } },
-{ "type": "Feature", "properties": { "fid": "60", "user": "Spike " }, "geometry": { "type": "Point", "coordinates": [ -118.25535535816087, 34.039748221894463 ] } }
+{ "type": "Feature", "properties": { "fid": "60", "user": "Spike " }, "geometry": { "type": "Point", "coordinates": [ -118.25535535816087, 34.039748221894463 ] } },
+{ "type": "Feature", "properties": { "fid": "61", "user": "Gary White" }, "geometry": { "type": "Point", "coordinates": [ -7.111445633269228, 52.258229139911712 ] } }
 ]
 }
