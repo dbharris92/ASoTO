@@ -8,13 +8,13 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/MarkerCluster.css">
-        <link rel="stylesheet" href="css/MarkerCluster.Default.css">
         <link rel="stylesheet" href="css/leaflet-search.css">
         <style>
-        #map {
-            width: 1031px;
-            height: 891px;
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
         }
         </style>
         <title></title>
@@ -32,14 +32,13 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="js/leaflet.markercluster.js"></script>
         <script src="js/leaflet-search.js"></script>
         <script src="data/members_1.js"></script>
         <script src="data/Meancoordinates_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[37.17534800384832,-88.94726030054667],[41.37059978916082,-82.67130733670058]]);
+        }).fitBounds([[38.5534626155796,-85.14809770064842],[39.60567984676076,-83.57910945969104]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -105,12 +104,8 @@
                 return L.circleMarker(latlng, style_members_1_0(feature));
             },
         });
-        var cluster_members_1 = new L.MarkerClusterGroup({showCoverageOnHover: false,
-            spiderfyDistanceMultiplier: 2});
-        cluster_members_1.addLayer(layer_members_1);
-
         bounds_group.addLayer(layer_members_1);
-        cluster_members_1.addTo(map);
+        map.addLayer(layer_members_1);
         function pop_Meancoordinates_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -126,7 +121,7 @@
         function style_Meancoordinates_2_0() {
             return {
                 pane: 'pane_Meancoordinates_2',
-                radius: 16.0,
+                radius: 20.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
