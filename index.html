@@ -8,6 +8,8 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/MarkerCluster.css">
+        <link rel="stylesheet" href="css/MarkerCluster.Default.css">
         <link rel="stylesheet" href="css/leaflet-search.css">
         <style>
         html, body, #map {
@@ -32,13 +34,14 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+        <script src="js/leaflet.markercluster.js"></script>
         <script src="js/leaflet-search.js"></script>
         <script src="data/members_1.js"></script>
         <script src="data/Meancoordinates_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[38.5534626155796,-85.14809770064842],[39.60567984676076,-83.57910945969104]]);
+        }).fitBounds([[35.63297719827205,-79.17664605344493],[36.18193517960794,-78.39215193296624]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -104,8 +107,12 @@
                 return L.circleMarker(latlng, style_members_1_0(feature));
             },
         });
+        var cluster_members_1 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+            spiderfyDistanceMultiplier: 2});
+        cluster_members_1.addLayer(layer_members_1);
+
         bounds_group.addLayer(layer_members_1);
-        map.addLayer(layer_members_1);
+        cluster_members_1.addTo(map);
         function pop_Meancoordinates_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -130,8 +137,8 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(232,113,141,1.0)',
-                interactive: true,
+                fillColor: 'rgba(255,217,47,1.0)',
+                interactive: false,
             }
         }
         map.createPane('pane_Meancoordinates_2');
@@ -139,7 +146,7 @@
         map.getPane('pane_Meancoordinates_2').style['mix-blend-mode'] = 'normal';
         var layer_Meancoordinates_2 = new L.geoJson(json_Meancoordinates_2, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_Meancoordinates_2',
             layerName: 'layer_Meancoordinates_2',
             pane: 'pane_Meancoordinates_2',
