@@ -62,6 +62,11 @@ var json_members_1 = {
 { "type": "Feature", "properties": { "fid": "58", "user": "Damon Cherico" }, "geometry": { "type": "Point", "coordinates": [ -74.127966098247384, 40.069320173488336 ] } },
 { "type": "Feature", "properties": { "fid": "59", "user": "Alex Laws" }, "geometry": { "type": "Point", "coordinates": [ -122.330612670789108, 47.605381036451256 ] } },
 { "type": "Feature", "properties": { "fid": "60", "user": "Spike " }, "geometry": { "type": "Point", "coordinates": [ -118.25535535816087, 34.039748221894463 ] } },
-{ "type": "Feature", "properties": { "fid": "61", "user": "Gary White" }, "geometry": { "type": "Point", "coordinates": [ -7.111445633269228, 52.258229139911712 ] } }
+{ "type": "Feature", "properties": { "fid": "61", "user": "Gary White" }, "geometry": { "type": "Point", "coordinates": [ -7.111445633269228, 52.258229139911712 ] } },
+{ "type": "Feature", "properties": { "fid": "62", "user": "Rachael" }, "geometry": { "type": "Point", "coordinates": [ -81.871200384899396, 34.967063526307911 ] } },
+{ "type": "Feature", "properties": { "fid": "63", "user": "Debzita " }, "geometry": { "type": "Point", "coordinates": [ -78.929514204813842, 35.969205184224563 ] } },
+{ "type": "Feature", "properties": { "fid": "64", "user": "shannonmoyerszemenyi" }, "geometry": { "type": "Point", "coordinates": [ -81.255599192540586, 42.977152811070958 ] } },
+{ "type": "Feature", "properties": { "fid": "65", "user": "Lauren Earnhardt " }, "geometry": { "type": "Point", "coordinates": [ -78.782374743831028, 35.787610015119739 ] } },
+{ "type": "Feature", "properties": { "fid": "66", "user": "Carrie Power" }, "geometry": { "type": "Point", "coordinates": [ -78.95014708337257, 43.870128892650001 ] } }
 ]
 }
